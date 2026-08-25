@@ -1,404 +1,466 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Naumora Gifts | Gifts That Speak From The Heart</title>
+<title>Naumora Gifts | Gifts That Speak From The Heart</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      font-family: Georgia, "Times New Roman", serif;
-      background: #faf7f2;
-      color: #2c2723;
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    header {
-      background: #fffdf9;
-      padding: 20px;
-      text-align: center;
-      border-bottom: 1px solid #e8ded2;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background: #faf7f2;
+  color: #2d2722;
+}
 
-    .logo {
-      font-size: 30px;
-      letter-spacing: 3px;
-      color: #8b6b4a;
-      font-weight: bold;
-    }
+/* HEADER */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,253,249,0.97);
+  border-bottom: 1px solid #e5d8ca;
+}
 
-    .tagline {
-      font-family: Arial, sans-serif;
-      font-size: 11px;
-      letter-spacing: 2px;
-      margin-top: 5px;
-      color: #8c8176;
-      text-transform: uppercase;
-    }
+.topbar {
+  max-width: 1200px;
+  margin: auto;
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-    .hero {
-      min-height: 520px;
-      padding: 80px 25px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background:
-        linear-gradient(rgba(250,247,242,.82), rgba(250,247,242,.92)),
-        radial-gradient(circle at top right, #ead8c4, transparent 45%);
-    }
+.logo {
+  color: #8b6b4a;
+  font-size: 25px;
+  letter-spacing: 4px;
+  font-weight: bold;
+}
 
-    .hero-content {
-      max-width: 700px;
-    }
+.cart {
+  border: 1px solid #8b6b4a;
+  background: transparent;
+  padding: 9px 14px;
+  color: #8b6b4a;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+}
 
-    .small-title {
-      font-family: Arial, sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      font-size: 12px;
-      color: #9b7956;
-      margin-bottom: 20px;
-    }
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 0 15px 16px;
+}
 
-    .hero h1 {
-      font-size: 52px;
-      line-height: 1.1;
-      font-weight: normal;
-      margin-bottom: 20px;
-    }
+nav a {
+  text-decoration: none;
+  color: #5d5147;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
 
-    .hero p {
-      font-family: Arial, sans-serif;
-      color: #70675f;
-      font-size: 16px;
-      line-height: 1.7;
-      margin-bottom: 30px;
-    }
+/* HERO */
+.hero {
+  min-height: 570px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 25px;
+  background:
+    linear-gradient(rgba(250,247,242,.82), rgba(250,247,242,.94)),
+    radial-gradient(circle at 80% 20%, #ead8c4, transparent 45%);
+}
 
-    .shop-btn {
-      display: inline-block;
-      padding: 15px 32px;
-      background: #8b6b4a;
-      color: white;
-      text-decoration: none;
-      font-family: Arial, sans-serif;
-      letter-spacing: 1px;
-      font-size: 13px;
-      transition: .3s;
-    }
+.hero-content {
+  max-width: 720px;
+}
 
-    .shop-btn:hover {
-      background: #6f5238;
-    }
+.eyebrow {
+  font-family: Arial, sans-serif;
+  color: #9b7956;
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
 
-    section {
-      padding: 65px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
+.hero h1 {
+  font-size: 52px;
+  line-height: 1.08;
+  font-weight: normal;
+  margin-bottom: 22px;
+}
 
-    .section-title {
-      text-align: center;
-      font-size: 32px;
-      font-weight: normal;
-      margin-bottom: 10px;
-    }
+.hero p {
+  font-family: Arial, sans-serif;
+  color: #756b62;
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
 
-    .section-subtitle {
-      text-align: center;
-      font-family: Arial, sans-serif;
-      color: #857b71;
-      margin-bottom: 40px;
-      font-size: 14px;
-    }
+.button {
+  display: inline-block;
+  background: #8b6b4a;
+  color: white;
+  text-decoration: none;
+  padding: 15px 32px;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+}
 
-    .categories {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-    }
+/* SECTIONS */
+section {
+  max-width: 1150px;
+  margin: auto;
+  padding: 75px 22px;
+}
 
-    .category {
-      padding: 35px 15px;
-      background: #fffdf9;
-      border: 1px solid #e8ded2;
-      text-align: center;
-      transition: .3s;
-    }
+.section-title {
+  text-align: center;
+  font-size: 35px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
 
-    .category:hover {
-      transform: translateY(-4px);
-    }
+.section-subtitle {
+  text-align: center;
+  color: #81766c;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  margin-bottom: 42px;
+}
 
-    .category-icon {
-      font-size: 30px;
-      margin-bottom: 12px;
-    }
+/* CATEGORIES */
+.categories {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
 
-    .category h3 {
-      font-size: 18px;
-      font-weight: normal;
-    }
+.category {
+  background: #fffdf9;
+  border: 1px solid #e5d8ca;
+  padding: 32px 12px;
+  text-align: center;
+  transition: .3s;
+}
 
-    .category p {
-      font-family: Arial, sans-serif;
-      font-size: 12px;
-      color: #8b8178;
-      margin-top: 7px;
-    }
+.category:hover {
+  transform: translateY(-4px);
+}
 
-    .products {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-    }
+.category-icon {
+  font-size: 34px;
+  margin-bottom: 16px;
+}
 
-    .product {
-      background: #fffdf9;
-      border: 1px solid #e8ded2;
-      overflow: hidden;
-    }
+.category h3 {
+  font-size: 19px;
+  font-weight: normal;
+}
 
-    .product-image {
-      height: 190px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #eee5da;
-      font-size: 55px;
-    }
+.category p {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  color: #887d73;
+  margin-top: 8px;
+}
 
-    .product-info {
-      padding: 18px;
-    }
+/* PRODUCTS */
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
 
-    .product-name {
-      font-size: 17px;
-      margin-bottom: 8px;
-    }
+.product {
+  background: #fffdf9;
+  border: 1px solid #e5d8ca;
+  overflow: hidden;
+}
 
-    .price {
-      font-family: Arial, sans-serif;
-      color: #8b6b4a;
-      font-weight: bold;
-    }
+.product-image {
+  height: 180px;
+  background: #eee5da;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 55px;
+}
 
-    .add-btn {
-      width: 100%;
-      margin-top: 14px;
-      padding: 11px;
-      border: 1px solid #8b6b4a;
-      background: transparent;
-      color: #8b6b4a;
-      cursor: pointer;
-      font-family: Arial, sans-serif;
-    }
+.product-info {
+  padding: 18px;
+}
 
-    .add-btn:hover {
-      background: #8b6b4a;
-      color: white;
-    }
+.product-name {
+  font-size: 17px;
+  margin-bottom: 8px;
+}
 
-    .promise {
-      background: #eee5da;
-      text-align: center;
-      max-width: none;
-    }
+.price {
+  color: #8b6b4a;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
 
-    .promise-content {
-      max-width: 800px;
-      margin: auto;
-    }
+.add-btn {
+  width: 100%;
+  margin-top: 14px;
+  padding: 11px;
+  background: transparent;
+  border: 1px solid #8b6b4a;
+  color: #8b6b4a;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+}
 
-    .promise h2 {
-      font-size: 32px;
-      font-weight: normal;
-      margin-bottom: 15px;
-    }
+/* PROMISE */
+.promise {
+  max-width: none;
+  background: #eee5da;
+  text-align: center;
+}
 
-    .promise p {
-      font-family: Arial, sans-serif;
-      color: #71675e;
-      line-height: 1.8;
-    }
+.promise-inner {
+  max-width: 700px;
+  margin: auto;
+}
 
-    footer {
-      background: #2c2723;
-      color: #fffaf3;
-      text-align: center;
-      padding: 40px 20px;
-    }
+.promise h2 {
+  font-size: 34px;
+  font-weight: normal;
+  margin-bottom: 18px;
+}
 
-    footer h2 {
-      font-weight: normal;
-      letter-spacing: 3px;
-      margin-bottom: 10px;
-    }
+.promise p {
+  font-family: Arial, sans-serif;
+  color: #71675e;
+  line-height: 1.8;
+}
 
-    footer p {
-      font-family: Arial, sans-serif;
-      font-size: 12px;
-      color: #c9beb2;
-    }
+/* FOOTER */
+footer {
+  background: #2d2722;
+  color: #fffaf3;
+  text-align: center;
+  padding: 45px 20px;
+}
 
-    @media (min-width: 700px) {
-      .categories {
-        grid-template-columns: repeat(4, 1fr);
-      }
+footer h2 {
+  font-weight: normal;
+  letter-spacing: 4px;
+  margin-bottom: 12px;
+}
 
-      .products {
-        grid-template-columns: repeat(4, 1fr);
-      }
+footer p {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  color: #cbbfb2;
+}
 
-      .hero h1 {
-        font-size: 70px;
-      }
-    }
-  </style>
+/* DESKTOP */
+@media (min-width: 700px) {
+  .hero h1 {
+    font-size: 72px;
+  }
+
+  .categories {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .products {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* SMALL PHONES */
+@media (max-width: 380px) {
+  .logo {
+    font-size: 21px;
+  }
+
+  nav {
+    gap: 13px;
+  }
+
+  nav a {
+    font-size: 10px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <header>
+<header>
+  <div class="topbar">
     <div class="logo">NAUMORA</div>
-    <div class="tagline">Gifts That Speak From The Heart</div>
-  </header>
+    <button class="cart">🛒 Cart (0)</button>
+  </div>
 
-  <main>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#categories">Categories</a>
+    <a href="#shop">Shop</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
 
-    <section class="hero">
-      <div class="hero-content">
-        <div class="small-title">Thoughtfully Chosen</div>
+<main>
 
-        <h1>Make Every Moment Beautiful.</h1>
+<section class="hero">
+  <div class="hero-content">
 
-        <p>
-          Discover elegant gifts created to celebrate
-          the people and moments that mean the most.
-        </p>
+    <div class="eyebrow">Thoughtfully Chosen • Beautifully Gifted</div>
 
-        <a href="#shop" class="shop-btn">EXPLORE GIFTS</a>
+    <h1>Make Every Moment Beautiful.</h1>
+
+    <p>
+      Discover elegant gifts created to celebrate
+      the people and moments that mean the most.
+    </p>
+
+    <a class="button" href="#shop">EXPLORE GIFTS</a>
+
+  </div>
+</section>
+
+<section id="categories">
+
+  <h2 class="section-title">Find The Perfect Gift</h2>
+
+  <p class="section-subtitle">
+    Something beautiful for every special moment.
+  </p>
+
+  <div class="categories">
+
+    <div class="category">
+      <div class="category-icon">🎂</div>
+      <h3>Birthday</h3>
+      <p>Make their day unforgettable</p>
+    </div>
+
+    <div class="category">
+      <div class="category-icon">❤️</div>
+      <h3>For Her</h3>
+      <p>Beautiful gifts for her</p>
+    </div>
+
+    <div class="category">
+      <div class="category-icon">🎁</div>
+      <h3>For Him</h3>
+      <p>Thoughtful gifts for him</p>
+    </div>
+
+    <div class="category">
+      <div class="category-icon">✨</div>
+      <h3>Personalized</h3>
+      <p>Made especially for them</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="shop">
+
+  <h2 class="section-title">Featured Gifts</h2>
+
+  <p class="section-subtitle">
+    Beautiful gifts for beautiful moments.
+  </p>
+
+  <div class="products">
+
+    <div class="product">
+      <div class="product-image">🎁</div>
+      <div class="product-info">
+        <div class="product-name">Elegant Gift Box</div>
+        <div class="price">₹799</div>
+        <button class="add-btn">ADD TO CART</button>
       </div>
-    </section>
+    </div>
 
-    <section>
-      <h2 class="section-title">Find The Perfect Gift</h2>
-
-      <p class="section-subtitle">
-        Something beautiful for every special moment.
-      </p>
-
-      <div class="categories">
-
-        <div class="category">
-          <div class="category-icon">🎂</div>
-          <h3>Birthday</h3>
-          <p>Make their day special</p>
-        </div>
-
-        <div class="category">
-          <div class="category-icon">❤️</div>
-          <h3>For Her</h3>
-          <p>Beautiful gifts for her</p>
-        </div>
-
-        <div class="category">
-          <div class="category-icon">🎁</div>
-          <h3>For Him</h3>
-          <p>Thoughtful gifts for him</p>
-        </div>
-
-        <div class="category">
-          <div class="category-icon">✨</div>
-          <h3>Personalized</h3>
-          <p>Made just for them</p>
-        </div>
-
+    <div class="product">
+      <div class="product-image">🌹</div>
+      <div class="product-info">
+        <div class="product-name">Romantic Rose Box</div>
+        <div class="price">₹999</div>
+        <button class="add-btn">ADD TO CART</button>
       </div>
-    </section>
+    </div>
 
-    <section id="shop">
-
-      <h2 class="section-title">Featured Gifts</h2>
-
-      <p class="section-subtitle">
-        A little preview of what's coming to Naumora.
-      </p>
-
-      <div class="products">
-
-        <div class="product">
-          <div class="product-image">🎁</div>
-          <div class="product-info">
-            <div class="product-name">Elegant Gift Box</div>
-            <div class="price">₹799</div>
-            <button class="add-btn">ADD TO CART</button>
-          </div>
-        </div>
-
-        <div class="product">
-          <div class="product-image">🌹</div>
-          <div class="product-info">
-            <div class="product-name">Romantic Rose Box</div>
-            <div class="price">₹999</div>
-            <button class="add-btn">ADD TO CART</button>
-          </div>
-        </div>
-
-        <div class="product">
-          <div class="product-image">🧸</div>
-          <div class="product-info">
-            <div class="product-name">Love & Teddy Gift</div>
-            <div class="price">₹699</div>
-            <button class="add-btn">ADD TO CART</button>
-          </div>
-        </div>
-
-        <div class="product">
-          <div class="product-image">💎</div>
-          <div class="product-info">
-            <div class="product-name">Luxury Surprise Box</div>
-            <div class="price">₹1,499</div>
-            <button class="add-btn">ADD TO CART</button>
-          </div>
-        </div>
-
+    <div class="product">
+      <div class="product-image">🧸</div>
+      <div class="product-info">
+        <div class="product-name">Love & Teddy Gift</div>
+        <div class="price">₹699</div>
+        <button class="add-btn">ADD TO CART</button>
       </div>
-    </section>
+    </div>
 
-    <section class="promise">
-      <div class="promise-content">
-
-        <h2>More Than Just A Gift.</h2>
-
-        <p>
-          At Naumora, we believe the right gift can turn
-          an ordinary moment into a beautiful memory.
-          Every gift is chosen with love and delivered
-          with care.
-        </p>
-
+    <div class="product">
+      <div class="product-image">💎</div>
+      <div class="product-info">
+        <div class="product-name">Luxury Surprise Box</div>
+        <div class="price">₹1,499</div>
+        <button class="add-btn">ADD TO CART</button>
       </div>
-    </section>
+    </div>
 
-  </main>
+  </div>
+</section>
 
-  <footer>
-    <h2>NAUMORA GIFTS</h2>
-    <p>Gifts That Speak From The Heart</p>
-    <br>
-    <p>© 2026 Naumora Gifts. All rights reserved.</p>
-  </footer>
+<section class="promise" id="about">
+
+  <div class="promise-inner">
+
+    <h2>More Than Just A Gift.</h2>
+
+    <p>
+      At Naumora, we believe the right gift can turn
+      an ordinary moment into a beautiful memory.
+      Every gift is chosen with love and delivered
+      with care.
+    </p>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+
+  <h2>NAUMORA GIFTS</h2>
+
+  <p>Gifts That Speak From The Heart</p>
+
+  <br>
+
+  <p>© 2026 Naumora Gifts. All rights reserved.</p>
+
+</footer>
 
 </body>
 </html>
