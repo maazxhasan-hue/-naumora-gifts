@@ -461,19 +461,61 @@ footer p {
   <p>© 2026 Naumora Gifts. All rights reserved.</p>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-<script>
-  const SUPABASE_URL = "https://aqtqfthsljaqstnziwlf.supabase.co";
-  const SUPABASE_KEY = "sb_publishable_gbIgAMiTo0kB3wi5qYbwUw_s00Aye4n";
 
-  const supabaseClient = window.supabase.createClient(
-    SUPABASE_URL,
-    SUPABASE_KEY
-  );
+  <script>
+const SUPABASE_URL = "https://aqtqfthsljaqstnziwlf.supabase.co";
+const SUPABASE_KEY = "sb_publishable_gblGmiI0okB3wi5qybwL_s00Ay4eaf";
 
-  console.log("Supabase connected!");
+const supabaseClient = window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_KEY
+);
+
+async function loadProducts() {
+  const { data, error } = await supabaseClient
+    .from("products")
+    .select("*")
+    .order("Id", { ascending: true });
+
+  if (error) {
+    console.error("Products error:", error);
+    return;
+  }
+
+  const productsContainer = document.querySelector(".products");
+
+  if (!productsContainer) {
+    console.error("Products container not found");
+    return;
+  }
+
+  productsContainer.innerHTML = "";
+
+  data.forEach(product => {
+    let emoji = "🎁";
+
+    if (product.Category === "Romantic") emoji = "🌹";
+    if (product.Category === "Teddy") emoji = "🧸";
+    if (product.Category === "Luxury") emoji = "💎";
+
+    productsContainer.innerHTML += `
+      <div class="product">
+        <div class="product-image">${emoji}</div>
+
+        <div class="product-info">
+          <div class="product-name">${product.NameName}</div>
+          <div class="price">₹${product.Price}</div>
+
+          <button class="add-btn">
+            ADD TO CART
+          </button>
+        </div>
+      </div>
+    `;
+  });
+}
+
+loadProducts();
+
+console.log("Supabase connected!");
 </script>
-</footer>
-  
-</body>
-</html>
-
