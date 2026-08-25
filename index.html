@@ -19,149 +19,158 @@
 
     body {
       font-family: Georgia, "Times New Roman", serif;
-      background: #fff8f7;
-      color: #333;
-    }
-
-    header {
-      background: linear-gradient(135deg, #fff, #ffe9e7);
-      padding: 22px 7%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 15px rgba(0,0,0,0.08);
-    }
-
-    .logo {
-      font-size: 28px;
-      font-weight: bold;
-      color: #b85c6b;
-      letter-spacing: 1px;
+      background: #fffaf8;
+      color: #555;
     }
 
     nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 250, 248, 0.96);
+      padding: 22px 7%;
       display: flex;
-      gap: 25px;
+      justify-content: space-between;
       align-items: center;
+      border-bottom: 1px solid #f1dfe3;
+    }
+
+    .logo {
+      font-size: 27px;
+      font-weight: bold;
+      color: #c45b7b;
     }
 
     nav a {
       text-decoration: none;
-      color: #444;
-      font-size: 16px;
-      cursor: pointer;
+      color: #666;
+      margin-left: 28px;
+      font-size: 17px;
     }
 
     nav a:hover {
-      color: #b85c6b;
-    }
-
-    .cart-btn {
-      background: #b85c6b;
-      color: white;
-      border: none;
-      padding: 10px 17px;
-      border-radius: 25px;
-      cursor: pointer;
-      font-size: 15px;
+      color: #c45b7b;
     }
 
     .hero {
-      min-height: 520px;
+      min-height: 78vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       padding: 70px 20px;
-      background:
-        radial-gradient(circle at top left, #ffe0e4, transparent 35%),
-        radial-gradient(circle at bottom right, #ffd9d3, transparent 35%),
-        #fff8f7;
+      background: linear-gradient(
+        135deg,
+        #fff7f5,
+        #fff0f4,
+        #fffaf8
+      );
     }
 
     .hero-content {
-      max-width: 750px;
+      max-width: 800px;
     }
 
     .hero h1 {
-      font-size: clamp(42px, 7vw, 72px);
-      color: #a94d60;
+      font-size: clamp(45px, 8vw, 82px);
+      color: #c45b7b;
       margin-bottom: 20px;
     }
 
     .hero p {
-      font-size: 20px;
+      font-size: 21px;
       line-height: 1.7;
-      color: #666;
-      margin-bottom: 30px;
+      color: #777;
     }
 
-    .shop-btn {
-      display: inline-block;
-      background: #b85c6b;
-      color: white;
-      padding: 14px 30px;
+    .hero button {
+      margin-top: 30px;
+      padding: 15px 32px;
+      border: none;
       border-radius: 30px;
-      text-decoration: none;
+      background: #c45b7b;
+      color: white;
       font-size: 17px;
-      transition: 0.3s;
+      cursor: pointer;
     }
 
-    .shop-btn:hover {
-      transform: translateY(-2px);
-      background: #963f51;
+    .hero button:hover {
+      opacity: 0.85;
     }
 
     section {
-      padding: 70px 7%;
+      padding: 90px 7%;
     }
 
     .section-title {
       text-align: center;
-      color: #a94d60;
-      font-size: 38px;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 48px;
+      color: #c45b7b;
       margin-bottom: 12px;
     }
 
-    .section-subtitle {
-      text-align: center;
-      color: #777;
-      margin-bottom: 40px;
-      font-size: 17px;
+    .section-title p {
+      font-size: 19px;
+      color: #888;
+    }
+
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 45px;
+    }
+
+    .category-btn {
+      border: 1px solid #e5aebe;
+      background: white;
+      color: #c45b7b;
+      padding: 11px 22px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 16px;
+    }
+
+    .category-btn:hover,
+    .category-btn.active {
+      background: #c45b7b;
+      color: white;
     }
 
     .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 28px;
       max-width: 1200px;
       margin: auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
     }
 
     .product {
       background: white;
-      border-radius: 18px;
+      border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-      transition: 0.3s;
-      border: 1px solid #f1dddd;
+      box-shadow: 0 8px 25px rgba(120, 60, 80, 0.08);
+      border: 1px solid #f3e2e6;
+      transition: transform 0.25s ease;
     }
 
     .product:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      transform: translateY(-7px);
     }
 
     .product-image {
-      height: 190px;
+      height: 210px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, #ffe9e9, #fff4ef);
-      font-size: 80px;
+      background: #fff0f4;
+      font-size: 75px;
     }
 
     .product-info {
@@ -170,210 +179,138 @@
     }
 
     .product-name {
-      font-size: 20px;
-      font-weight: bold;
-      color: #444;
+      font-size: 22px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .product-category {
+      font-size: 14px;
+      color: #b8798d;
       margin-bottom: 10px;
     }
 
     .price {
-      font-size: 20px;
-      color: #b85c6b;
+      font-size: 21px;
       font-weight: bold;
+      color: #c45b7b;
       margin-bottom: 18px;
     }
 
     .add-btn {
       width: 100%;
       border: none;
-      background: #b85c6b;
-      color: white;
       padding: 12px;
       border-radius: 25px;
+      background: #c45b7b;
+      color: white;
       cursor: pointer;
-      font-size: 15px;
-      transition: 0.3s;
+      font-family: inherit;
+      font-size: 16px;
     }
 
     .add-btn:hover {
-      background: #963f51;
+      opacity: 0.85;
     }
 
-    .loading {
-      grid-column: 1 / -1;
+    .loading,
+    .error,
+    .empty {
       text-align: center;
-      padding: 40px;
-      color: #888;
+      padding: 35px;
       font-size: 18px;
+      grid-column: 1 / -1;
     }
 
     .error {
-      grid-column: 1 / -1;
-      text-align: center;
-      padding: 30px;
-      color: #b33;
-      background: #fff0f0;
-      border-radius: 12px;
+      color: #b44d65;
     }
 
     .about {
-      background: #fff;
       text-align: center;
+      background: #fff0f4;
     }
 
     .about-content {
-      max-width: 750px;
+      max-width: 800px;
       margin: auto;
-      color: #666;
-      font-size: 18px;
+    }
+
+    .about h2 {
+      font-size: 48px;
+      color: #c45b7b;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      font-size: 19px;
       line-height: 1.8;
+      color: #777;
     }
 
     footer {
-      background: #2d2527;
-      color: white;
       text-align: center;
-      padding: 45px 20px;
+      padding: 35px 20px;
+      background: #c45b7b;
+      color: white;
     }
 
     footer h2 {
-      color: #ffd8dc;
-      margin-bottom: 12px;
-    }
-
-    footer p {
-      color: #ddd;
-      margin-bottom: 12px;
-    }
-
-    .cart-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.5);
-      display: none;
-      z-index: 2000;
-    }
-
-    .cart-overlay.active {
-      display: block;
+      margin-bottom: 10px;
     }
 
     .cart {
       position: fixed;
-      right: 0;
-      top: 0;
-      width: min(420px, 92%);
-      height: 100%;
-      background: white;
-      z-index: 2001;
-      padding: 25px;
-      overflow-y: auto;
-      transform: translateX(100%);
-      transition: 0.3s;
-    }
-
-    .cart.active {
-      transform: translateX(0);
-    }
-
-    .cart-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 25px;
-    }
-
-    .cart-header h2 {
-      color: #a94d60;
-    }
-
-    .close-cart {
-      border: none;
-      background: none;
-      font-size: 28px;
-      cursor: pointer;
-      color: #555;
-    }
-
-    .cart-item {
-      display: flex;
-      justify-content: space-between;
-      gap: 15px;
-      padding: 15px 0;
-      border-bottom: 1px solid #eee;
-    }
-
-    .cart-item-name {
-      font-weight: bold;
-    }
-
-    .cart-item-price {
-      color: #b85c6b;
-    }
-
-    .remove-btn {
-      border: none;
-      background: #f5d7db;
-      color: #9b4655;
-      padding: 5px 9px;
-      border-radius: 15px;
-      cursor: pointer;
-    }
-
-    .cart-total {
-      margin-top: 25px;
-      font-size: 21px;
-      font-weight: bold;
-      text-align: right;
-      color: #444;
-    }
-
-    .checkout-btn {
-      width: 100%;
-      margin-top: 20px;
-      border: none;
-      background: #b85c6b;
+      right: 25px;
+      bottom: 25px;
+      z-index: 200;
+      background: #c45b7b;
       color: white;
-      padding: 14px;
-      border-radius: 25px;
+      border: none;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      font-size: 23px;
       cursor: pointer;
-      font-size: 16px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.18);
     }
 
-    .empty-cart {
-      text-align: center;
-      color: #888;
-      padding: 40px 0;
+    .cart-count {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background: #333;
+      color: white;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    @media (max-width: 700px) {
-      header {
-        padding: 18px 5%;
+    @media (max-width: 650px) {
+      nav {
+        padding: 17px 5%;
       }
 
       .logo {
         font-size: 21px;
       }
 
-      nav {
-        gap: 10px;
-      }
-
       nav a {
-        display: none;
-      }
-
-      .hero {
-        min-height: 450px;
-        padding: 50px 20px;
+        margin-left: 12px;
+        font-size: 14px;
       }
 
       section {
-        padding: 55px 5%;
+        padding: 65px 5%;
       }
 
-      .section-title {
-        font-size: 30px;
+      .section-title h2,
+      .about h2 {
+        font-size: 38px;
       }
     }
   </style>
@@ -381,37 +318,31 @@
 
 <body>
 
-  <!-- HEADER -->
-  <header>
+  <!-- NAVIGATION -->
+  <nav>
     <div class="logo">Naumora Gifts</div>
 
-    <nav>
+    <div>
       <a href="#home">Home</a>
       <a href="#products">Gifts</a>
       <a href="#about">About</a>
-
-      <button class="cart-btn" onclick="openCart()">
-        🛒 Cart (<span id="cartCount">0</span>)
-      </button>
-    </nav>
-  </header>
+    </div>
+  </nav>
 
 
   <!-- HERO -->
   <section class="hero" id="home">
     <div class="hero-content">
-
-      <h1>Gifts That Speak From The Heart</h1>
+      <h1>Gifts From The Heart 💕</h1>
 
       <p>
         Beautiful gifts for beautiful moments.
-        Find something special for the people who mean the most.
+        Find something special for someone special.
       </p>
 
-      <a href="#products" class="shop-btn">
-        Explore Gifts
-      </a>
-
+      <button onclick="document.getElementById('products').scrollIntoView()">
+        Explore Our Gifts
+      </button>
     </div>
   </section>
 
@@ -419,20 +350,21 @@
   <!-- PRODUCTS -->
   <section id="products">
 
-    <h2 class="section-title">
-      Our Gifts
-    </h2>
+    <div class="section-title">
+      <h2>Our Gifts</h2>
+      <p>Choose something special for someone special 💗</p>
+    </div>
 
-    <p class="section-subtitle">
-      Choose something special for someone special ❤️
-    </p>
+    <div class="categories" id="categories">
+      <button class="category-btn active" onclick="filterProducts('all', this)">
+        All
+      </button>
+    </div>
 
     <div class="products" id="productsContainer">
-
       <div class="loading">
-        Loading beautiful gifts...
+        Loading beautiful gifts... 💕
       </div>
-
     </div>
 
   </section>
@@ -441,22 +373,14 @@
   <!-- ABOUT -->
   <section class="about" id="about">
 
-    <h2 class="section-title">
-      About Naumora Gifts
-    </h2>
-
     <div class="about-content">
 
-      <p>
-        At Naumora Gifts, we believe that the perfect gift
-        can turn an ordinary moment into a beautiful memory.
-      </p>
-
-      <br>
+      <h2>About Naumora Gifts</h2>
 
       <p>
-        From romantic surprises to thoughtful gifts,
-        we bring you something special for every occasion.
+        At Naumora Gifts, we believe that the perfect gift can turn
+        an ordinary moment into a beautiful memory.
+        Every gift is chosen with love, care and thoughtfulness. 💕
       </p>
 
     </div>
@@ -467,10 +391,10 @@
   <!-- FOOTER -->
   <footer>
 
-    <h2>NAUMORA GIFTS</h2>
+    <h2>Naumora Gifts 💕</h2>
 
     <p>
-      Gifts That Speak From The Heart
+      Gifts that speak from the heart.
     </p>
 
     <br>
@@ -482,63 +406,27 @@
   </footer>
 
 
-  <!-- CART OVERLAY -->
-  <div
-    class="cart-overlay"
-    id="cartOverlay"
-    onclick="closeCart()">
-  </div>
-
-
   <!-- CART -->
-  <div class="cart" id="cart">
-
-    <div class="cart-header">
-
-      <h2>Your Cart</h2>
-
-      <button
-        class="close-cart"
-        onclick="closeCart()">
-        ×
-      </button>
-
-    </div>
-
-    <div id="cartItems">
-
-      <div class="empty-cart">
-        Your cart is empty.
-      </div>
-
-    </div>
-
-    <div class="cart-total">
-      Total: ₹<span id="cartTotal">0</span>
-    </div>
-
-    <button
-      class="checkout-btn"
-      onclick="checkout()">
-      Proceed to Checkout
-    </button>
-
-  </div>
+  <button class="cart" onclick="showCart()">
+    🛒
+    <span class="cart-count" id="cartCount">0</span>
+  </button>
 
 
   <!-- SUPABASE -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-
-  <!-- WEBSITE JAVASCRIPT -->
   <script>
+
+    /* ==============================
+       SUPABASE CONNECTION
+    ============================== */
 
     const SUPABASE_URL =
       "https://aqtqfthsljaqstnziwlf.supabase.co";
 
     const SUPABASE_KEY =
       "sb_publishable_gbIgAMiTo0kB3wi5qYbwUw_s00Aye4n";
-
 
     const supabaseClient =
       window.supabase.createClient(
@@ -547,12 +435,17 @@
       );
 
 
-    let cart = [];
+    /* ==============================
+       GLOBAL VARIABLES
+    ============================== */
+
+    let allProducts = [];
+    let cartItems = [];
 
 
-    /*
-      LOAD PRODUCTS FROM SUPABASE
-    */
+    /* ==============================
+       LOAD PRODUCTS
+    ============================== */
 
     async function loadProducts() {
 
@@ -564,355 +457,291 @@
         const { data, error } =
           await supabaseClient
             .from("products")
-            .select("Id, NameName, Price, Category")
-            .order("Id", {
-              ascending: true
-            });
+            .select('Idid, "NameName", Price, Category')
+            .order("Idid", { ascending: true });
 
 
         if (error) {
-
-          console.error(
-            "Supabase products error:",
-            error
-          );
-
-          productsContainer.innerHTML = `
-            <div class="error">
-              Unable to load products.
-              Please try again later.
-            </div>
-          `;
-
-          return;
+          console.error("Supabase products error:", error);
+          throw error;
         }
 
 
         if (!data || data.length === 0) {
 
-          productsContainer.innerHTML = `
-            <div class="loading">
-              No products available right now.
-            </div>
-          `;
+          productsContainer.innerHTML =
+            '<div class="empty">No gifts available right now. 💕</div>';
 
           return;
         }
 
 
-        productsContainer.innerHTML = "";
+        allProducts = data;
 
+        createCategories(data);
 
-        data.forEach(product => {
+        displayProducts(data);
 
-          let emoji = "🎁";
+      } catch (error) {
 
+        console.error(error);
 
-          if (product.Category === "Romantic") {
-            emoji = "🌹";
-          }
-
-          else if (product.Category === "Teddy") {
-            emoji = "🧸";
-          }
-
-          else if (product.Category === "Luxury") {
-            emoji = "💎";
-          }
-
-
-          const productCard =
-            document.createElement("div");
-
-          productCard.className = "product";
-
-
-          productCard.innerHTML = `
-
-            <div class="product-image">
-              ${emoji}
-            </div>
-
-            <div class="product-info">
-
-              <div class="product-name">
-                ${escapeHTML(product.NameName)}
-              </div>
-
-              <div class="price">
-                ₹${Number(product.Price).toLocaleString("en-IN")}
-              </div>
-
-              <button
-                class="add-btn"
-                onclick="addToCart(
-                  ${product.Id},
-                  '${escapeJS(product.NameName)}',
-                  ${Number(product.Price)}
-                )">
-
-                ADD TO CART
-
-              </button>
-
-            </div>
-
-          `;
-
-
-          productsContainer.appendChild(
-            productCard
-          );
-
-        });
-
-
-        console.log(
-          "Products loaded successfully:",
-          data
-        );
-
+        productsContainer.innerHTML = `
+          <div class="error">
+            Unable to load products.<br>
+            Please try again later.
+          </div>
+        `;
       }
-
-      catch (error) {
-
-        console.error(
-          "Unexpected error:",
-          error
-        );
-
-      }
-
     }
 
 
-    /*
-      ADD PRODUCT TO CART
-    */
+    /* ==============================
+       CREATE CATEGORIES
+    ============================== */
 
-    function addToCart(
-      id,
-      name,
-      price
-    ) {
+    function createCategories(products) {
 
-      const existingItem =
-        cart.find(item => item.id === id);
+      const categoriesContainer =
+        document.getElementById("categories");
+
+      const categories = [
+        ...new Set(
+          products
+            .map(product => product.Category)
+            .filter(category => category)
+        )
+      ];
 
 
-      if (existingItem) {
+      categoriesContainer.innerHTML = `
+        <button
+          class="category-btn active"
+          onclick="filterProducts('all', this)">
+          All
+        </button>
+      `;
 
-        existingItem.quantity++;
 
+      categories.forEach(category => {
+
+        const button =
+          document.createElement("button");
+
+        button.className = "category-btn";
+
+        button.textContent = category;
+
+        button.onclick = function() {
+          filterProducts(category, this);
+        };
+
+        categoriesContainer.appendChild(button);
+
+      });
+    }
+
+
+    /* ==============================
+       DISPLAY PRODUCTS
+    ============================== */
+
+    function displayProducts(products) {
+
+      const productsContainer =
+        document.getElementById("productsContainer");
+
+
+      if (!products || products.length === 0) {
+
+        productsContainer.innerHTML =
+          '<div class="empty">No gifts found. 💕</div>';
+
+        return;
       }
 
-      else {
 
-        cart.push({
-          id: id,
-          name: name,
-          price: price,
-          quantity: 1
+      productsContainer.innerHTML = "";
+
+
+      products.forEach(product => {
+
+        const card =
+          document.createElement("div");
+
+        card.className = "product";
+
+
+        const emoji =
+          getProductEmoji(product.Category);
+
+
+        card.innerHTML = `
+
+          <div class="product-image">
+            ${emoji}
+          </div>
+
+          <div class="product-info">
+
+            <div class="product-name">
+              ${escapeHTML(product.NameName)}
+            </div>
+
+            <div class="product-category">
+              ${escapeHTML(product.Category || "Gift")}
+            </div>
+
+            <div class="price">
+              ₹${Number(product.Price).toLocaleString("en-IN")}
+            </div>
+
+            <button
+              class="add-btn"
+              onclick="addToCart(${product.Idid})">
+              ADD TO CART
+            </button>
+
+          </div>
+
+        `;
+
+
+        productsContainer.appendChild(card);
+
+      });
+    }
+
+
+    /* ==============================
+       FILTER PRODUCTS
+    ============================== */
+
+    function filterProducts(category, button) {
+
+      document
+        .querySelectorAll(".category-btn")
+        .forEach(btn => {
+          btn.classList.remove("active");
         });
 
+
+      if (button) {
+        button.classList.add("active");
       }
 
 
-      updateCart();
+      if (category === "all") {
+
+        displayProducts(allProducts);
+
+      } else {
+
+        const filtered =
+          allProducts.filter(
+            product => product.Category === category
+          );
+
+        displayProducts(filtered);
+      }
+    }
+
+
+    /* ==============================
+       PRODUCT EMOJIS
+    ============================== */
+
+    function getProductEmoji(category) {
+
+      const value =
+        String(category || "").toLowerCase();
+
+
+      if (value.includes("romantic")) {
+        return "🌹";
+      }
+
+      if (value.includes("teddy")) {
+        return "🧸";
+      }
+
+      if (value.includes("luxury")) {
+        return "💎";
+      }
+
+      if (value.includes("gift")) {
+        return "🎁";
+      }
+
+      return "🎁";
+    }
+
+
+    /* ==============================
+       CART
+    ============================== */
+
+    function addToCart(id) {
+
+      const product =
+        allProducts.find(
+          item => Number(item.Idid) === Number(id)
+        );
+
+
+      if (!product) return;
+
+
+      cartItems.push(product);
+
+      document.getElementById("cartCount")
+        .textContent = cartItems.length;
 
 
       alert(
-        name + " added to cart! ❤️"
+        product.NameName +
+        " added to cart! 🛍️"
       );
-
     }
 
 
-    /*
-      REMOVE PRODUCT
-    */
+    function showCart() {
 
-    function removeFromCart(id) {
+      if (cartItems.length === 0) {
 
-      cart =
-        cart.filter(
-          item => item.id !== id
-        );
-
-      updateCart();
-
-    }
-
-
-    /*
-      UPDATE CART
-    */
-
-    function updateCart() {
-
-      const cartItems =
-        document.getElementById("cartItems");
-
-      const cartCount =
-        document.getElementById("cartCount");
-
-      const cartTotal =
-        document.getElementById("cartTotal");
-
-
-      const totalItems =
-        cart.reduce(
-          (sum, item) =>
-            sum + item.quantity,
-          0
-        );
-
-
-      const totalPrice =
-        cart.reduce(
-          (sum, item) =>
-            sum +
-            item.price *
-            item.quantity,
-          0
-        );
-
-
-      cartCount.textContent =
-        totalItems;
-
-
-      cartTotal.textContent =
-        totalPrice.toLocaleString("en-IN");
-
-
-      if (cart.length === 0) {
-
-        cartItems.innerHTML = `
-          <div class="empty-cart">
-            Your cart is empty.
-          </div>
-        `;
+        alert("Your cart is empty 💕");
 
         return;
-
       }
 
 
-      cartItems.innerHTML = "";
+      let total = 0;
+
+      let message =
+        "Your Naumora Gifts Cart:\n\n";
 
 
-      cart.forEach(item => {
+      cartItems.forEach((item, index) => {
 
-        const div =
-          document.createElement("div");
+        message +=
+          `${index + 1}. ${item.NameName} - ₹${item.Price}\n`;
 
-        div.className =
-          "cart-item";
-
-
-        div.innerHTML = `
-
-          <div>
-
-            <div class="cart-item-name">
-              ${escapeHTML(item.name)}
-            </div>
-
-            <div>
-              Qty: ${item.quantity}
-            </div>
-
-            <div class="cart-item-price">
-              ₹${(
-                item.price *
-                item.quantity
-              ).toLocaleString("en-IN")}
-            </div>
-
-          </div>
-
-          <button
-            class="remove-btn"
-            onclick="removeFromCart(${item.id})">
-
-            Remove
-
-          </button>
-
-        `;
-
-
-        cartItems.appendChild(div);
+        total += Number(item.Price);
 
       });
 
+
+      message +=
+        `\nTotal: ₹${total.toLocaleString("en-IN")}`;
+
+
+      alert(message);
     }
 
 
-    /*
-      OPEN CART
-    */
-
-    function openCart() {
-
-      document
-        .getElementById("cart")
-        .classList.add("active");
-
-
-      document
-        .getElementById("cartOverlay")
-        .classList.add("active");
-
-    }
-
-
-    /*
-      CLOSE CART
-    */
-
-    function closeCart() {
-
-      document
-        .getElementById("cart")
-        .classList.remove("active");
-
-
-      document
-        .getElementById("cartOverlay")
-        .classList.remove("active");
-
-    }
-
-
-    /*
-      CHECKOUT
-    */
-
-    function checkout() {
-
-      if (cart.length === 0) {
-
-        alert(
-          "Your cart is empty."
-        );
-
-        return;
-
-      }
-
-
-      alert(
-        "Checkout system will be connected next. ❤️"
-      );
-
-    }
-
-
-    /*
-      SECURITY HELPERS
-    */
+    /* ==============================
+       SECURITY / HTML ESCAPE
+    ============================== */
 
     function escapeHTML(value) {
 
@@ -922,24 +751,17 @@
         .replace(/>/g, "&gt;")
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&#039;");
-
     }
 
 
-    function escapeJS(value) {
+    /* ==============================
+       START WEBSITE
+    ============================== */
 
-      return String(value)
-        .replace(/\\/g, "\\\\")
-        .replace(/'/g, "\\'")
-
-    }
-
-
-    /*
-      START
-    */
-
-    loadProducts();
+    document.addEventListener(
+      "DOMContentLoaded",
+      loadProducts
+    );
 
   </script>
 
