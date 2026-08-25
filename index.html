@@ -459,8 +459,21 @@ footer p {
   <br>
 
   <p>© 2026 Naumora Gifts. All rights reserved.</p>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
+<script>
+  const SUPABASE_URL = "https://aqtqfthsljaqstnziwlf.supabase.co";
+  const SUPABASE_KEY = "sb_publishable_gbIgAMiTo0kB3wi5qYbwUw_s00Aye4n";
+
+  const supabaseClient = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_KEY
+  );
+
+  console.log("Supabase connected!");
+</script>
 </footer>
-
+  
 </body>
 </html>
+
