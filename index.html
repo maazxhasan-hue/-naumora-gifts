@@ -1,521 +1,947 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Naumora Gifts | Gifts That Speak From The Heart</title>
+  <title>Naumora Gifts | Gifts That Speak From The Heart</title>
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-html {
-  scroll-behavior: smooth;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-body {
-  font-family: Georgia, "Times New Roman", serif;
-  background: #faf7f2;
-  color: #2d2722;
-}
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: #fff8f7;
+      color: #333;
+    }
 
-/* HEADER */
-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(255,253,249,0.97);
-  border-bottom: 1px solid #e5d8ca;
-}
+    header {
+      background: linear-gradient(135deg, #fff, #ffe9e7);
+      padding: 22px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+    }
 
-.topbar {
-  max-width: 1200px;
-  margin: auto;
-  padding: 18px 22px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #b85c6b;
+      letter-spacing: 1px;
+    }
 
-.logo {
-  color: #8b6b4a;
-  font-size: 25px;
-  letter-spacing: 4px;
-  font-weight: bold;
-}
+    nav {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
 
-.cart {
-  border: 1px solid #8b6b4a;
-  background: transparent;
-  padding: 9px 14px;
-  color: #8b6b4a;
-  font-family: Arial, sans-serif;
-  cursor: pointer;
-}
+    nav a {
+      text-decoration: none;
+      color: #444;
+      font-size: 16px;
+      cursor: pointer;
+    }
 
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  padding: 0 15px 16px;
-}
+    nav a:hover {
+      color: #b85c6b;
+    }
 
-nav a {
-  text-decoration: none;
-  color: #5d5147;
-  font-family: Arial, sans-serif;
-  font-size: 12px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
+    .cart-btn {
+      background: #b85c6b;
+      color: white;
+      border: none;
+      padding: 10px 17px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 15px;
+    }
 
-/* HERO */
-.hero {
-  min-height: 570px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 80px 25px;
-  background:
-    linear-gradient(rgba(250,247,242,.82), rgba(250,247,242,.94)),
-    radial-gradient(circle at 80% 20%, #ead8c4, transparent 45%);
-}
+    .hero {
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 70px 20px;
+      background:
+        radial-gradient(circle at top left, #ffe0e4, transparent 35%),
+        radial-gradient(circle at bottom right, #ffd9d3, transparent 35%),
+        #fff8f7;
+    }
 
-.hero-content {
-  max-width: 720px;
-}
+    .hero-content {
+      max-width: 750px;
+    }
 
-.eyebrow {
-  font-family: Arial, sans-serif;
-  color: #9b7956;
-  font-size: 11px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  margin-bottom: 22px;
-}
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 72px);
+      color: #a94d60;
+      margin-bottom: 20px;
+    }
 
-.hero h1 {
-  font-size: 52px;
-  line-height: 1.08;
-  font-weight: normal;
-  margin-bottom: 22px;
-}
+    .hero p {
+      font-size: 20px;
+      line-height: 1.7;
+      color: #666;
+      margin-bottom: 30px;
+    }
 
-.hero p {
-  font-family: Arial, sans-serif;
-  color: #756b62;
-  line-height: 1.8;
-  margin-bottom: 32px;
-}
+    .shop-btn {
+      display: inline-block;
+      background: #b85c6b;
+      color: white;
+      padding: 14px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 17px;
+      transition: 0.3s;
+    }
 
-.button {
-  display: inline-block;
-  background: #8b6b4a;
-  color: white;
-  text-decoration: none;
-  padding: 15px 32px;
-  font-family: Arial, sans-serif;
-  font-size: 12px;
-  letter-spacing: 1.5px;
-}
+    .shop-btn:hover {
+      transform: translateY(-2px);
+      background: #963f51;
+    }
 
-/* SECTIONS */
-section {
-  max-width: 1150px;
-  margin: auto;
-  padding: 75px 22px;
-}
+    section {
+      padding: 70px 7%;
+    }
 
-.section-title {
-  text-align: center;
-  font-size: 35px;
-  font-weight: normal;
-  margin-bottom: 10px;
-}
+    .section-title {
+      text-align: center;
+      color: #a94d60;
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
 
-.section-subtitle {
-  text-align: center;
-  color: #81766c;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  margin-bottom: 42px;
-}
+    .section-subtitle {
+      text-align: center;
+      color: #777;
+      margin-bottom: 40px;
+      font-size: 17px;
+    }
 
-/* CATEGORIES */
-.categories {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
-}
+    .products {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+    }
 
-.category {
-  background: #fffdf9;
-  border: 1px solid #e5d8ca;
-  padding: 32px 12px;
-  text-align: center;
-  transition: .3s;
-}
+    .product {
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      transition: 0.3s;
+      border: 1px solid #f1dddd;
+    }
 
-.category:hover {
-  transform: translateY(-4px);
-}
+    .product:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
 
-.category-icon {
-  font-size: 34px;
-  margin-bottom: 16px;
-}
+    .product-image {
+      height: 190px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #ffe9e9, #fff4ef);
+      font-size: 80px;
+    }
 
-.category h3 {
-  font-size: 19px;
-  font-weight: normal;
-}
+    .product-info {
+      padding: 22px;
+      text-align: center;
+    }
 
-.category p {
-  font-family: Arial, sans-serif;
-  font-size: 12px;
-  color: #887d73;
-  margin-top: 8px;
-}
+    .product-name {
+      font-size: 20px;
+      font-weight: bold;
+      color: #444;
+      margin-bottom: 10px;
+    }
 
-/* PRODUCTS */
-.products {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-}
+    .price {
+      font-size: 20px;
+      color: #b85c6b;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
 
-.product {
-  background: #fffdf9;
-  border: 1px solid #e5d8ca;
-  overflow: hidden;
-}
+    .add-btn {
+      width: 100%;
+      border: none;
+      background: #b85c6b;
+      color: white;
+      padding: 12px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 15px;
+      transition: 0.3s;
+    }
 
-.product-image {
-  height: 180px;
-  background: #eee5da;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 55px;
-}
+    .add-btn:hover {
+      background: #963f51;
+    }
 
-.product-info {
-  padding: 18px;
-}
+    .loading {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 40px;
+      color: #888;
+      font-size: 18px;
+    }
 
-.product-name {
-  font-size: 17px;
-  margin-bottom: 8px;
-}
+    .error {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 30px;
+      color: #b33;
+      background: #fff0f0;
+      border-radius: 12px;
+    }
 
-.price {
-  color: #8b6b4a;
-  font-family: Arial, sans-serif;
-  font-weight: bold;
-}
+    .about {
+      background: #fff;
+      text-align: center;
+    }
 
-.add-btn {
-  width: 100%;
-  margin-top: 14px;
-  padding: 11px;
-  background: transparent;
-  border: 1px solid #8b6b4a;
-  color: #8b6b4a;
-  font-family: Arial, sans-serif;
-  cursor: pointer;
-}
+    .about-content {
+      max-width: 750px;
+      margin: auto;
+      color: #666;
+      font-size: 18px;
+      line-height: 1.8;
+    }
 
-/* PROMISE */
-.promise {
-  max-width: none;
-  background: #eee5da;
-  text-align: center;
-}
+    footer {
+      background: #2d2527;
+      color: white;
+      text-align: center;
+      padding: 45px 20px;
+    }
 
-.promise-inner {
-  max-width: 700px;
-  margin: auto;
-}
+    footer h2 {
+      color: #ffd8dc;
+      margin-bottom: 12px;
+    }
 
-.promise h2 {
-  font-size: 34px;
-  font-weight: normal;
-  margin-bottom: 18px;
-}
+    footer p {
+      color: #ddd;
+      margin-bottom: 12px;
+    }
 
-.promise p {
-  font-family: Arial, sans-serif;
-  color: #71675e;
-  line-height: 1.8;
-}
+    .cart-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      display: none;
+      z-index: 2000;
+    }
 
-/* FOOTER */
-footer {
-  background: #2d2722;
-  color: #fffaf3;
-  text-align: center;
-  padding: 45px 20px;
-}
+    .cart-overlay.active {
+      display: block;
+    }
 
-footer h2 {
-  font-weight: normal;
-  letter-spacing: 4px;
-  margin-bottom: 12px;
-}
+    .cart {
+      position: fixed;
+      right: 0;
+      top: 0;
+      width: min(420px, 92%);
+      height: 100%;
+      background: white;
+      z-index: 2001;
+      padding: 25px;
+      overflow-y: auto;
+      transform: translateX(100%);
+      transition: 0.3s;
+    }
 
-footer p {
-  font-family: Arial, sans-serif;
-  font-size: 12px;
-  color: #cbbfb2;
-}
+    .cart.active {
+      transform: translateX(0);
+    }
 
-/* DESKTOP */
-@media (min-width: 700px) {
-  .hero h1 {
-    font-size: 72px;
-  }
+    .cart-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+    }
 
-  .categories {
-    grid-template-columns: repeat(4, 1fr);
-  }
+    .cart-header h2 {
+      color: #a94d60;
+    }
 
-  .products {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
+    .close-cart {
+      border: none;
+      background: none;
+      font-size: 28px;
+      cursor: pointer;
+      color: #555;
+    }
 
-/* SMALL PHONES */
-@media (max-width: 380px) {
-  .logo {
-    font-size: 21px;
-  }
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 15px 0;
+      border-bottom: 1px solid #eee;
+    }
 
-  nav {
-    gap: 13px;
-  }
+    .cart-item-name {
+      font-weight: bold;
+    }
 
-  nav a {
-    font-size: 10px;
-  }
+    .cart-item-price {
+      color: #b85c6b;
+    }
 
-  .hero h1 {
-    font-size: 42px;
-  }
-}
-</style>
+    .remove-btn {
+      border: none;
+      background: #f5d7db;
+      color: #9b4655;
+      padding: 5px 9px;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+
+    .cart-total {
+      margin-top: 25px;
+      font-size: 21px;
+      font-weight: bold;
+      text-align: right;
+      color: #444;
+    }
+
+    .checkout-btn {
+      width: 100%;
+      margin-top: 20px;
+      border: none;
+      background: #b85c6b;
+      color: white;
+      padding: 14px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .empty-cart {
+      text-align: center;
+      color: #888;
+      padding: 40px 0;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        padding: 18px 5%;
+      }
+
+      .logo {
+        font-size: 21px;
+      }
+
+      nav {
+        gap: 10px;
+      }
+
+      nav a {
+        display: none;
+      }
+
+      .hero {
+        min-height: 450px;
+        padding: 50px 20px;
+      }
+
+      section {
+        padding: 55px 5%;
+      }
+
+      .section-title {
+        font-size: 30px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <div class="topbar">
-    <div class="logo">NAUMORA</div>
-    <button class="cart">🛒 Cart (0)</button>
-  </div>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">Naumora Gifts</div>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#categories">Categories</a>
-    <a href="#shop">Shop</a>
-    <a href="#about">About</a>
-  </nav>
-</header>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products">Gifts</a>
+      <a href="#about">About</a>
 
-<main>
+      <button class="cart-btn" onclick="openCart()">
+        🛒 Cart (<span id="cartCount">0</span>)
+      </button>
+    </nav>
+  </header>
 
-<section class="hero">
-  <div class="hero-content">
 
-    <div class="eyebrow">Thoughtfully Chosen • Beautifully Gifted</div>
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
 
-    <h1>Make Every Moment Beautiful.</h1>
+      <h1>Gifts That Speak From The Heart</h1>
 
-    <p>
-      Discover elegant gifts created to celebrate
-      the people and moments that mean the most.
+      <p>
+        Beautiful gifts for beautiful moments.
+        Find something special for the people who mean the most.
+      </p>
+
+      <a href="#products" class="shop-btn">
+        Explore Gifts
+      </a>
+
+    </div>
+  </section>
+
+
+  <!-- PRODUCTS -->
+  <section id="products">
+
+    <h2 class="section-title">
+      Our Gifts
+    </h2>
+
+    <p class="section-subtitle">
+      Choose something special for someone special ❤️
     </p>
 
-    <a class="button" href="#shop">EXPLORE GIFTS</a>
+    <div class="products" id="productsContainer">
 
-  </div>
-</section>
-
-<section id="categories">
-
-  <h2 class="section-title">Find The Perfect Gift</h2>
-
-  <p class="section-subtitle">
-    Something beautiful for every special moment.
-  </p>
-
-  <div class="categories">
-
-    <div class="category">
-      <div class="category-icon">🎂</div>
-      <h3>Birthday</h3>
-      <p>Make their day unforgettable</p>
-    </div>
-
-    <div class="category">
-      <div class="category-icon">❤️</div>
-      <h3>For Her</h3>
-      <p>Beautiful gifts for her</p>
-    </div>
-
-    <div class="category">
-      <div class="category-icon">🎁</div>
-      <h3>For Him</h3>
-      <p>Thoughtful gifts for him</p>
-    </div>
-
-    <div class="category">
-      <div class="category-icon">✨</div>
-      <h3>Personalized</h3>
-      <p>Made especially for them</p>
-    </div>
-
-  </div>
-</section>
-
-<section id="shop">
-
-  <h2 class="section-title">Featured Gifts</h2>
-
-  <p class="section-subtitle">
-    Beautiful gifts for beautiful moments.
-  </p>
-
-  <div class="products">
-
-    <div class="product">
-      <div class="product-image">🎁</div>
-      <div class="product-info">
-        <div class="product-name">Elegant Gift Box</div>
-        <div class="price">₹799</div>
-        <button class="add-btn">ADD TO CART</button>
+      <div class="loading">
+        Loading beautiful gifts...
       </div>
+
     </div>
 
-    <div class="product">
-      <div class="product-image">🌹</div>
-      <div class="product-info">
-        <div class="product-name">Romantic Rose Box</div>
-        <div class="price">₹999</div>
-        <button class="add-btn">ADD TO CART</button>
-      </div>
+  </section>
+
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+
+    <h2 class="section-title">
+      About Naumora Gifts
+    </h2>
+
+    <div class="about-content">
+
+      <p>
+        At Naumora Gifts, we believe that the perfect gift
+        can turn an ordinary moment into a beautiful memory.
+      </p>
+
+      <br>
+
+      <p>
+        From romantic surprises to thoughtful gifts,
+        we bring you something special for every occasion.
+      </p>
+
     </div>
 
-    <div class="product">
-      <div class="product-image">🧸</div>
-      <div class="product-info">
-        <div class="product-name">Love & Teddy Gift</div>
-        <div class="price">₹699</div>
-        <button class="add-btn">ADD TO CART</button>
-      </div>
-    </div>
+  </section>
 
-    <div class="product">
-      <div class="product-image">💎</div>
-      <div class="product-info">
-        <div class="product-name">Luxury Surprise Box</div>
-        <div class="price">₹1,499</div>
-        <button class="add-btn">ADD TO CART</button>
-      </div>
-    </div>
 
-  </div>
-</section>
+  <!-- FOOTER -->
+  <footer>
 
-<section class="promise" id="about">
-
-  <div class="promise-inner">
-
-    <h2>More Than Just A Gift.</h2>
+    <h2>NAUMORA GIFTS</h2>
 
     <p>
-      At Naumora, we believe the right gift can turn
-      an ordinary moment into a beautiful memory.
-      Every gift is chosen with love and delivered
-      with care.
+      Gifts That Speak From The Heart
     </p>
+
+    <br>
+
+    <p>
+      © 2026 Naumora Gifts. All rights reserved.
+    </p>
+
+  </footer>
+
+
+  <!-- CART OVERLAY -->
+  <div
+    class="cart-overlay"
+    id="cartOverlay"
+    onclick="closeCart()">
+  </div>
+
+
+  <!-- CART -->
+  <div class="cart" id="cart">
+
+    <div class="cart-header">
+
+      <h2>Your Cart</h2>
+
+      <button
+        class="close-cart"
+        onclick="closeCart()">
+        ×
+      </button>
+
+    </div>
+
+    <div id="cartItems">
+
+      <div class="empty-cart">
+        Your cart is empty.
+      </div>
+
+    </div>
+
+    <div class="cart-total">
+      Total: ₹<span id="cartTotal">0</span>
+    </div>
+
+    <button
+      class="checkout-btn"
+      onclick="checkout()">
+      Proceed to Checkout
+    </button>
 
   </div>
 
-</section>
 
-</main>
-
-<footer>
-
-  <h2>NAUMORA GIFTS</h2>
-
-  <p>Gifts That Speak From The Heart</p>
-
-  <br>
-
-  <p>© 2026 Naumora Gifts. All rights reserved.</p>
+  <!-- SUPABASE -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 
+  <!-- WEBSITE JAVASCRIPT -->
   <script>
-const SUPABASE_URL = "https://aqtqfthsljaqstnziwlf.supabase.co";
-const SUPABASE_KEY = "sb_publishable_gblGmiI0okB3wi5qybwL_s00Ay4eaf";
 
-const supabaseClient = window.supabase.createClient(
-  SUPABASE_URL,
-  SUPABASE_KEY
-);
+    const SUPABASE_URL =
+      "https://aqtqfthsljaqstnziwlf.supabase.co";
 
-async function loadProducts() {
-  const { data, error } = await supabaseClient
-    .from("products")
-    .select("*")
-    .order("Id", { ascending: true });
+    const SUPABASE_KEY =
+      "sb_publishable_gbIgAMiTo0kB3wi5qYbwUw_s00Aye4n";
 
-  if (error) {
-    console.error("Products error:", error);
-    return;
-  }
 
-  const productsContainer = document.querySelector(".products");
+    const supabaseClient =
+      window.supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_KEY
+      );
 
-  if (!productsContainer) {
-    console.error("Products container not found");
-    return;
-  }
 
-  productsContainer.innerHTML = "";
+    let cart = [];
 
-  data.forEach(product => {
-    let emoji = "🎁";
 
-    if (product.Category === "Romantic") emoji = "🌹";
-    if (product.Category === "Teddy") emoji = "🧸";
-    if (product.Category === "Luxury") emoji = "💎";
+    /*
+      LOAD PRODUCTS FROM SUPABASE
+    */
 
-    productsContainer.innerHTML += `
-      <div class="product">
-        <div class="product-image">${emoji}</div>
+    async function loadProducts() {
 
-        <div class="product-info">
-          <div class="product-name">${product.NameName}</div>
-          <div class="price">₹${product.Price}</div>
+      const productsContainer =
+        document.getElementById("productsContainer");
 
-          <button class="add-btn">
-            ADD TO CART
+      try {
+
+        const { data, error } =
+          await supabaseClient
+            .from("products")
+            .select("Id, NameName, Price, Category")
+            .order("Id", {
+              ascending: true
+            });
+
+
+        if (error) {
+
+          console.error(
+            "Supabase products error:",
+            error
+          );
+
+          productsContainer.innerHTML = `
+            <div class="error">
+              Unable to load products.
+              Please try again later.
+            </div>
+          `;
+
+          return;
+        }
+
+
+        if (!data || data.length === 0) {
+
+          productsContainer.innerHTML = `
+            <div class="loading">
+              No products available right now.
+            </div>
+          `;
+
+          return;
+        }
+
+
+        productsContainer.innerHTML = "";
+
+
+        data.forEach(product => {
+
+          let emoji = "🎁";
+
+
+          if (product.Category === "Romantic") {
+            emoji = "🌹";
+          }
+
+          else if (product.Category === "Teddy") {
+            emoji = "🧸";
+          }
+
+          else if (product.Category === "Luxury") {
+            emoji = "💎";
+          }
+
+
+          const productCard =
+            document.createElement("div");
+
+          productCard.className = "product";
+
+
+          productCard.innerHTML = `
+
+            <div class="product-image">
+              ${emoji}
+            </div>
+
+            <div class="product-info">
+
+              <div class="product-name">
+                ${escapeHTML(product.NameName)}
+              </div>
+
+              <div class="price">
+                ₹${Number(product.Price).toLocaleString("en-IN")}
+              </div>
+
+              <button
+                class="add-btn"
+                onclick="addToCart(
+                  ${product.Id},
+                  '${escapeJS(product.NameName)}',
+                  ${Number(product.Price)}
+                )">
+
+                ADD TO CART
+
+              </button>
+
+            </div>
+
+          `;
+
+
+          productsContainer.appendChild(
+            productCard
+          );
+
+        });
+
+
+        console.log(
+          "Products loaded successfully:",
+          data
+        );
+
+      }
+
+      catch (error) {
+
+        console.error(
+          "Unexpected error:",
+          error
+        );
+
+      }
+
+    }
+
+
+    /*
+      ADD PRODUCT TO CART
+    */
+
+    function addToCart(
+      id,
+      name,
+      price
+    ) {
+
+      const existingItem =
+        cart.find(item => item.id === id);
+
+
+      if (existingItem) {
+
+        existingItem.quantity++;
+
+      }
+
+      else {
+
+        cart.push({
+          id: id,
+          name: name,
+          price: price,
+          quantity: 1
+        });
+
+      }
+
+
+      updateCart();
+
+
+      alert(
+        name + " added to cart! ❤️"
+      );
+
+    }
+
+
+    /*
+      REMOVE PRODUCT
+    */
+
+    function removeFromCart(id) {
+
+      cart =
+        cart.filter(
+          item => item.id !== id
+        );
+
+      updateCart();
+
+    }
+
+
+    /*
+      UPDATE CART
+    */
+
+    function updateCart() {
+
+      const cartItems =
+        document.getElementById("cartItems");
+
+      const cartCount =
+        document.getElementById("cartCount");
+
+      const cartTotal =
+        document.getElementById("cartTotal");
+
+
+      const totalItems =
+        cart.reduce(
+          (sum, item) =>
+            sum + item.quantity,
+          0
+        );
+
+
+      const totalPrice =
+        cart.reduce(
+          (sum, item) =>
+            sum +
+            item.price *
+            item.quantity,
+          0
+        );
+
+
+      cartCount.textContent =
+        totalItems;
+
+
+      cartTotal.textContent =
+        totalPrice.toLocaleString("en-IN");
+
+
+      if (cart.length === 0) {
+
+        cartItems.innerHTML = `
+          <div class="empty-cart">
+            Your cart is empty.
+          </div>
+        `;
+
+        return;
+
+      }
+
+
+      cartItems.innerHTML = "";
+
+
+      cart.forEach(item => {
+
+        const div =
+          document.createElement("div");
+
+        div.className =
+          "cart-item";
+
+
+        div.innerHTML = `
+
+          <div>
+
+            <div class="cart-item-name">
+              ${escapeHTML(item.name)}
+            </div>
+
+            <div>
+              Qty: ${item.quantity}
+            </div>
+
+            <div class="cart-item-price">
+              ₹${(
+                item.price *
+                item.quantity
+              ).toLocaleString("en-IN")}
+            </div>
+
+          </div>
+
+          <button
+            class="remove-btn"
+            onclick="removeFromCart(${item.id})">
+
+            Remove
+
           </button>
-        </div>
-      </div>
-    `;
-  });
-}
 
-loadProducts();
+        `;
 
-console.log("Supabase connected!");
-</script>
+
+        cartItems.appendChild(div);
+
+      });
+
+    }
+
+
+    /*
+      OPEN CART
+    */
+
+    function openCart() {
+
+      document
+        .getElementById("cart")
+        .classList.add("active");
+
+
+      document
+        .getElementById("cartOverlay")
+        .classList.add("active");
+
+    }
+
+
+    /*
+      CLOSE CART
+    */
+
+    function closeCart() {
+
+      document
+        .getElementById("cart")
+        .classList.remove("active");
+
+
+      document
+        .getElementById("cartOverlay")
+        .classList.remove("active");
+
+    }
+
+
+    /*
+      CHECKOUT
+    */
+
+    function checkout() {
+
+      if (cart.length === 0) {
+
+        alert(
+          "Your cart is empty."
+        );
+
+        return;
+
+      }
+
+
+      alert(
+        "Checkout system will be connected next. ❤️"
+      );
+
+    }
+
+
+    /*
+      SECURITY HELPERS
+    */
+
+    function escapeHTML(value) {
+
+      return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+
+    }
+
+
+    function escapeJS(value) {
+
+      return String(value)
+        .replace(/\\/g, "\\\\")
+        .replace(/'/g, "\\'")
+
+    }
+
+
+    /*
+      START
+    */
+
+    loadProducts();
+
+  </script>
+
+</body>
+</html>
