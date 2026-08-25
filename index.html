@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Naumora Gifts | Gifts That Speak From The Heart</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: #faf7f2;
+      color: #2c2723;
+    }
+
+    header {
+      background: #fffdf9;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #e8ded2;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 30px;
+      letter-spacing: 3px;
+      color: #8b6b4a;
+      font-weight: bold;
+    }
+
+    .tagline {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      margin-top: 5px;
+      color: #8c8176;
+      text-transform: uppercase;
+    }
+
+    .hero {
+      min-height: 520px;
+      padding: 80px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background:
+        linear-gradient(rgba(250,247,242,.82), rgba(250,247,242,.92)),
+        radial-gradient(circle at top right, #ead8c4, transparent 45%);
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .small-title {
+      font-family: Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 12px;
+      color: #9b7956;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      line-height: 1.1;
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-family: Arial, sans-serif;
+      color: #70675f;
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .shop-btn {
+      display: inline-block;
+      padding: 15px 32px;
+      background: #8b6b4a;
+      color: white;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      letter-spacing: 1px;
+      font-size: 13px;
+      transition: .3s;
+    }
+
+    .shop-btn:hover {
+      background: #6f5238;
+    }
+
+    section {
+      padding: 65px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      color: #857b71;
+      margin-bottom: 40px;
+      font-size: 14px;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .category {
+      padding: 35px 15px;
+      background: #fffdf9;
+      border: 1px solid #e8ded2;
+      text-align: center;
+      transition: .3s;
+    }
+
+    .category:hover {
+      transform: translateY(-4px);
+    }
+
+    .category-icon {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .category h3 {
+      font-size: 18px;
+      font-weight: normal;
+    }
+
+    .category p {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      color: #8b8178;
+      margin-top: 7px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .product {
+      background: #fffdf9;
+      border: 1px solid #e8ded2;
+      overflow: hidden;
+    }
+
+    .product-image {
+      height: 190px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #eee5da;
+      font-size: 55px;
+    }
+
+    .product-info {
+      padding: 18px;
+    }
+
+    .product-name {
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .price {
+      font-family: Arial, sans-serif;
+      color: #8b6b4a;
+      font-weight: bold;
+    }
+
+    .add-btn {
+      width: 100%;
+      margin-top: 14px;
+      padding: 11px;
+      border: 1px solid #8b6b4a;
+      background: transparent;
+      color: #8b6b4a;
+      cursor: pointer;
+      font-family: Arial, sans-serif;
+    }
+
+    .add-btn:hover {
+      background: #8b6b4a;
+      color: white;
+    }
+
+    .promise {
+      background: #eee5da;
+      text-align: center;
+      max-width: none;
+    }
+
+    .promise-content {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .promise h2 {
+      font-size: 32px;
+      font-weight: normal;
+      margin-bottom: 15px;
+    }
+
+    .promise p {
+      font-family: Arial, sans-serif;
+      color: #71675e;
+      line-height: 1.8;
+    }
+
+    footer {
+      background: #2c2723;
+      color: #fffaf3;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    footer h2 {
+      font-weight: normal;
+      letter-spacing: 3px;
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      color: #c9beb2;
+    }
+
+    @media (min-width: 700px) {
+      .categories {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .products {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .hero h1 {
+        font-size: 70px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">NAUMORA</div>
+    <div class="tagline">Gifts That Speak From The Heart</div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-content">
+        <div class="small-title">Thoughtfully Chosen</div>
+
+        <h1>Make Every Moment Beautiful.</h1>
+
+        <p>
+          Discover elegant gifts created to celebrate
+          the people and moments that mean the most.
+        </p>
+
+        <a href="#shop" class="shop-btn">EXPLORE GIFTS</a>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Find The Perfect Gift</h2>
+
+      <p class="section-subtitle">
+        Something beautiful for every special moment.
+      </p>
+
+      <div class="categories">
+
+        <div class="category">
+          <div class="category-icon">🎂</div>
+          <h3>Birthday</h3>
+          <p>Make their day special</p>
+        </div>
+
+        <div class="category">
+          <div class="category-icon">❤️</div>
+          <h3>For Her</h3>
+          <p>Beautiful gifts for her</p>
+        </div>
+
+        <div class="category">
+          <div class="category-icon">🎁</div>
+          <h3>For Him</h3>
+          <p>Thoughtful gifts for him</p>
+        </div>
+
+        <div class="category">
+          <div class="category-icon">✨</div>
+          <h3>Personalized</h3>
+          <p>Made just for them</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="shop">
+
+      <h2 class="section-title">Featured Gifts</h2>
+
+      <p class="section-subtitle">
+        A little preview of what's coming to Naumora.
+      </p>
+
+      <div class="products">
+
+        <div class="product">
+          <div class="product-image">🎁</div>
+          <div class="product-info">
+            <div class="product-name">Elegant Gift Box</div>
+            <div class="price">₹799</div>
+            <button class="add-btn">ADD TO CART</button>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="product-image">🌹</div>
+          <div class="product-info">
+            <div class="product-name">Romantic Rose Box</div>
+            <div class="price">₹999</div>
+            <button class="add-btn">ADD TO CART</button>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="product-image">🧸</div>
+          <div class="product-info">
+            <div class="product-name">Love & Teddy Gift</div>
+            <div class="price">₹699</div>
+            <button class="add-btn">ADD TO CART</button>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="product-image">💎</div>
+          <div class="product-info">
+            <div class="product-name">Luxury Surprise Box</div>
+            <div class="price">₹1,499</div>
+            <button class="add-btn">ADD TO CART</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="promise">
+      <div class="promise-content">
+
+        <h2>More Than Just A Gift.</h2>
+
+        <p>
+          At Naumora, we believe the right gift can turn
+          an ordinary moment into a beautiful memory.
+          Every gift is chosen with love and delivered
+          with care.
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <h2>NAUMORA GIFTS</h2>
+    <p>Gifts That Speak From The Heart</p>
+    <br>
+    <p>© 2026 Naumora Gifts. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
